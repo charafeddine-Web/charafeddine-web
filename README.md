@@ -1,4 +1,3 @@
-<img align="right" height="150" src="https://s10.aconvert.com/convert/p3r68-cdx67/ablz3-larau.jpg"  />
 
 ###
 
