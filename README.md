@@ -6,7 +6,7 @@
 
 ![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&duration=4000&pause=1000&color=00BFFF&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;3D+Web+Experience+Creator;Code+Sculptor;Digital+Transformation+Expert)
 
-## 🌈 Technological Constellation
+##  Technological Constellation
 
 <img src="https://komarev.com/ghpvc/?username=charafeddine-Web&label=Profile+Exploration&color=blueviolet&style=for-the-badge" alt="Profile Views" />
 
@@ -70,7 +70,7 @@
 ⚛️ React        ███████░░░░░░░░░   20%
 ```
 
-## 🌈 Interdimensional Connections
+##  Interdimensional Connections
 
 <div align="center">
 
