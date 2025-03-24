@@ -97,13 +97,13 @@ Other       █░░░░░░░░░░░░░░░░░░░░░�
   
   ### Let's Connect!
   
-  <a href="[https://linkedin.com](https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/)">
+  <a href="https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166973395-19676cd8-f8ec-4abf-83ff-da8243505b82.png"/>
   </a>
   <a href="mailto:charafeddinetbibzat@gmail.com">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166974271-91dfa250-d70b-4cb9-8707-f1bda1b708c3.png"/>
   </a>
-  <a href="[https://instagram.com](https://www.instagram.com/charafeddine_22/)">
+  <a href="https://www.instagram.com/charafeddine_22/">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81e0a3f83a3e.png"/>
   </a>
   
