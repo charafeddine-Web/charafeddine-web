@@ -1,91 +1,114 @@
-# Charaf Eddine | Full Stack Web Developer 🚀
+import React, { useState, useRef, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, Stars, Float } from '@react-three/drei';
+import * as THREE from 'three';
 
-<div align="center">
+// 3D Skill Sphere Component
+function SkillSphere({ skill, color }) {
+  const meshRef = useRef();
+  const [active, setActive] = useState(false);
 
-## 💻 Code Wizard | 🌐 Web Architect | 🔥 Innovation Enthusiast
+  useFrame(({ clock }) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.01;
+      meshRef.current.rotation.y += 0.01;
+    }
+  });
 
-![Typing Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&duration=4000&pause=1000&color=00BFFF&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;JavaScript+Maestro;MERN+Stack+Expert;Laravel+Ninja;Building+Digital+Experiences)
+  return (
+    <Float
+      speed={1.5}
+      rotationIntensity={0.5}
+      floatIntensity={0.5}
+    >
+      <mesh
+        ref={meshRef}
+        scale={active ? 1.5 : 1}
+        onClick={() => setActive(!active)}
+        onPointerOver={() => setActive(true)}
+        onPointerOut={() => setActive(false)}
+      >
+        <sphereGeometry args={[0.5, 32, 32]} />
+        <meshStandardMaterial 
+          color={color} 
+          opacity={0.8} 
+          transparent 
+          emissive={color}
+          emissiveIntensity={0.5}
+        />
+        <Suspense fallback={null}>
+          <Html
+            position={[0, 1, 0]}
+            distanceFactor={10}
+            center
+          >
+            <div className="text-white text-xs">{skill}</div>
+          </Html>
+        </Suspense>
+      </mesh>
+    </Float>
+  );
+}
 
-## 🌈 Connect & Explore
+// Main Portfolio Component
+function Portfolio() {
+  const skills = [
+    { name: 'React', color: '#61DAFB' },
+    { name: 'Laravel', color: '#FF2D20' },
+    { name: 'Node.js', color: '#339933' },
+    { name: 'MongoDB', color: '#4EA94B' },
+    { name: 'Docker', color: '#2CA5E0' }
+  ];
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&animation=fadeIn)](https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/)
-[![GitHub](https://img.shields.io/badge/GitHub-333?style=for-the-badge&logo=github&logoColor=white&animation=pulse)](https://github.com/charafeddine-Web)
-[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-portfolio-link.com)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:charafeddinetbibzat@gmail.com)
+  return (
+    <div className="h-screen w-full bg-gradient-to-br from-blue-900 via-purple-900 to-black">
+      <Canvas 
+        camera={{ position: [0, 0, 5], fov: 60 }}
+        className="absolute inset-0"
+      >
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        
+        {/* Background Stars */}
+        <Stars 
+          radius={300} 
+          depth={50} 
+          count={5000} 
+          factor={4} 
+          saturation={0} 
+        />
 
-</div>
+        {/* Skill Spheres */}
+        <group position={[0, 0, 0]}>
+          {skills.map((skill, index) => (
+            <SkillSphere 
+              key={skill.name}
+              skill={skill.name}
+              color={skill.color}
+              position={[
+                Math.cos(index * Math.PI * 2 / skills.length) * 2,
+                Math.sin(index * Math.PI * 2 / skills.length) * 2,
+                0
+              ]}
+            />
+          ))}
+        </group>
 
-## 🚀 About My Coding Journey
+        {/* Orbit Controls */}
+        <OrbitControls enableZoom={true} />
+      </Canvas>
 
-> "Transforming complex challenges into elegant digital solutions, one commit at a time." 
+      {/* Overlay Text */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+        <h1 className="text-5xl font-bold mb-4 animate-pulse">
+          Charaf Eddine
+        </h1>
+        <p className="text-2xl text-blue-300 animate-fade-in">
+          Full Stack Web Developer
+        </p>
+      </div>
+    </div>
+  );
+}
 
-### 🎯 Professional Snapshot
-
-- 💡 **Current Focus**: Advanced Web Architectures & Scalable Solutions
-- 🌱 **Learning Path**: Cloud-Native Technologies & Microservices
-- 🔬 **Specialization**: Full Stack Development with MERN & Laravel Ecosystems
-- ⚡ **Passion**: Open Source Contributions & Innovative Tech Experiments
-
-## 🛠️ Tech Constellation
-
-<div align="center">
-
-### 🖥️ Frontend Universe
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
-### 🔧 Backend Toolkit
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-### 💾 Data Realms
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-
-### 🛠 DevOps & Collaboration
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
-</div>
-
-## 📊 Code Chronicles
-
-<div align="center">
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=charafeddine-Web&theme=radical&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=charafeddine-Web&layout=compact&theme=radical&hide_border=true)
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=charafeddine-Web&theme=react-dark&hide_border=true)
-
-</div>
-
-## 🌟 Current Code Composition
-
-```text
-🔹 PHP          ████████████░░░░   45%
-🔹 JavaScript   ████████░░░░░░░░   35%
-🔹 React        ███████░░░░░░░░░   20%
-```
-
-## 🤝 Let's Collaborate!
-
-<div align="center">
-
-### 📬 Reach Out & Ignite Innovation
-
-[![LinkedIn](https://img.shields.io/badge/Professional_Network-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/)
-[![Email](https://img.shields.io/badge/Send_A_Spark-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:charafeddinetbibzat@gmail.com)
-
-*Crafting digital experiences, one line of code at a time. 💻✨*
-
-</div>
-
-![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&animation=twinkling)
+export default Portfolio;
