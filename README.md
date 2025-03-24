@@ -4,10 +4,10 @@
   
   ![Header Animation](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=0D43A0&center=true&vCenter=true&random=false&width=435&lines=Full+Stack+Developer;JavaScript+Enthusiast;Laravel+Specialist;MERN+Stack+Expert)
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com](https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/))
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/charafeddine-Web)
-  [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com)
-  [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@gmail.com)
+  [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/charafeddine_22/)
+  [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:charafeddinetbibzat@gmail.com)
   
   <img src="https://komarev.com/ghpvc/?username=charafeddine-Web&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views" />
 
@@ -97,13 +97,13 @@ Other       █░░░░░░░░░░░░░░░░░░░░░�
   
   ### Let's Connect!
   
-  <a href="https://linkedin.com">
+  <a href="[https://linkedin.com](https://www.linkedin.com/in/charaf-eddine-tbibzat-9910652b0/)">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166973395-19676cd8-f8ec-4abf-83ff-da8243505b82.png"/>
   </a>
-  <a href="mailto:your-email@gmail.com">
+  <a href="mailto:charafeddinetbibzat@gmail.com">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166974271-91dfa250-d70b-4cb9-8707-f1bda1b708c3.png"/>
   </a>
-  <a href="https://instagram.com">
+  <a href="[https://instagram.com](https://www.instagram.com/charafeddine_22/)">
     <img height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81e0a3f83a3e.png"/>
   </a>
   
